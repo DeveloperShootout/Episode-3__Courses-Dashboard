@@ -6,12 +6,339 @@
   padding: 0;
 }
 
-body {
+body,
+select {
   font-family: "Source Sans Pro", sans-serif;
 }
 
-.hello {
-  font-size: 108px;
+body {
+  min-height: 100vh;
+  letter-spacing: 1px;
+  background: #1d272f;
+  color: white;
+  display: grid;
+  grid-template-columns: 356px auto;
+  grid-template-rows: 112px auto;
+}
+
+.logo-wrap {
+  background: #26313c;
+  display: flex;
+  align-items: center;
+  padding-left: 48px;
+  border-right: 2px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.05);
+}
+.logo-wrap .logo {
+  position: relative;
+  width: 20px;
+  height: 32px;
+  margin-right: 32px;
+}
+.logo-wrap .logo:before, .logo-wrap .logo:after {
+  content: "";
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.logo-wrap .logo:before {
+  z-index: 1;
+  background: #ff00b7;
+  height: 4px;
+  width: 100%;
+}
+.logo-wrap .logo:after {
+  background: #5486ee;
+  width: 4px;
+  height: 100%;
+}
+.logo-wrap .logo .dot {
+  background: #ee8155;
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+}
+.logo-wrap p {
+  font-size: 32px;
+  font-weight: 400;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  background: #26313c;
+  padding: 0 72px;
+}
+header .input-wrap {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+header .input-wrap .icon {
+  font-size: 30px;
+}
+header .input-wrap input {
+  padding: 24px;
+  background: none;
+  border: 0;
+  font-size: 22px;
+  color: white;
+}
+header .input-wrap input::-webkit-input-placeholder {
+  color: white;
+}
+header .input-wrap input:focus {
+  outline: 0;
+}
+header .notification {
+  margin-right: 48px;
+  position: relative;
+}
+header .notification .bell {
+  font-size: 32px;
+}
+header .notification:after {
+  content: "";
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 4px;
+  right: 0;
+  background: #0067e7;
+  border: 2px solid white;
+}
+header .user {
+  display: flex;
+  align-items: center;
+}
+header .user .circle {
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  height: 66px;
+  width: 66px;
+  border-radius: 50%;
+  background-image: linear-gradient(to bottom right, #ff8a05, #ff00b7);
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  background: #26313c;
+  padding: 52px 0 32px;
+}
+nav h3 {
+  margin-left: 48px;
+  text-transform: uppercase;
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 32px;
+}
+nav ul {
+  margin-bottom: 48px;
+}
+nav ul li {
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  margin: 4px 0;
+  padding: 24px 0;
+  padding-left: 48px;
+}
+nav ul li .icon {
+  font-size: 28px;
+  margin-right: 32px;
+  color: #aaaaaa;
+}
+nav ul li.active {
+  position: relative;
+  background: rgba(255, 255, 255, 0.05);
+}
+nav ul li.active .icon {
+  color: #0067e7;
+}
+nav ul li.active:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 5px;
+  border-radius: 10px;
+  background: #0067e7;
+}
+nav ul li .circle-icon {
+  margin-right: 36px;
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+nav ul li .circle-icon.orange {
+  border-color: #ff8a05;
+}
+nav ul li .circle-icon.purple {
+  border-color: #7532ff;
+}
+nav ul li .circle-icon.pink {
+  border-color: #ff00b7;
+}
+nav ul li.tertiary {
+  color: rgba(170, 170, 170, 0.5);
+}
+nav ul li.tertiary .icon {
+  color: rgba(170, 170, 170, 0.5);
+}
+nav .night {
+  margin-bottom: 0;
+  margin-top: auto;
+}
+nav .night li {
+  color: #aaaaaa;
+}
+nav .night .icon {
+  color: white;
+}
+
+main {
+  padding: 10vh 80px;
+}
+main .heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main .heading h1 {
+  font-weight: 400;
+  font-size: 40px;
+}
+main .heading .select-wrap {
+  border-radius: 8px;
+  background: #26313c;
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.05);
+  padding-right: 12px;
+}
+main .heading .select-wrap .down {
+  font-size: 12px;
+  color: #aaaaaa;
+}
+main .heading select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 16px 0 16px 24px;
+  color: white;
+  font-size: 20px;
+  background: none;
+  border: 0;
+}
+main .heading select:focus {
+  outline: 0;
+}
+main .main-cards {
+  margin-left: -48px;
+  margin-right: -48px;
+  margin-top: 48px;
+  display: flex;
+  flex-wrap: wrap;
+}
+main .card-wrap {
+  flex: 1 0 300px;
+  margin: 32px 48px;
+}
+main .card-wrap .card {
+  overflow: hidden;
+  border-radius: 10px;
+  background: #26313c;
+  margin-bottom: 16px;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+}
+main .card-wrap h2 {
+  font-weight: 400;
+  font-size: 28px;
+  padding: 32px 48px 24px;
+}
+main .card-wrap .text {
+  line-height: 1.8;
+  padding: 0 48px;
+  color: #747474;
+}
+main .card-wrap hr {
+  margin: 32px 48px;
+  border: 0;
+  height: 1px;
+  background: rgba(170, 170, 170, 0.05);
+}
+main .card-wrap .avatar-wrap {
+  display: flex;
+  padding: 0 48px 32px;
+}
+main .card-wrap .avatar-wrap img {
+  width: 50px;
+  height: 50px;
+  border: 3px solid white;
+  margin-right: -12px;
+  border-radius: 50%;
+}
+main .card-wrap .progress-card {
+  display: flex;
+  align-items: center;
+  padding: 48px;
+}
+main .card-wrap .progress-card .percent {
+  font-size: 22px;
+  color: #aaaaaa;
+  margin-left: 40px;
+}
+main .card-wrap .progress-card .progress {
+  overflow: hidden;
+  flex: 1;
+  height: 6px;
+  border-radius: 10px;
+  background: #c8c8c8;
+}
+main .card-wrap .progress-card .progress:after {
+  display: block;
+  content: "";
+  border-radius: 10px;
+  height: 100%;
+  width: 76%;
+  background: black;
+}
+main .card-wrap .progress-card .progress.one:after {
+  width: 76%;
+  background: #5486ee;
+}
+main .card-wrap .progress-card .progress.two:after {
+  width: 32%;
+  background: #ee8155;
+}
+main .card-wrap .progress-card .progress.three:after {
+  width: 46%;
+  background: #27ed55;
+}
+main .card-wrap .progress-card .progress.four:after {
+  width: 12%;
+  background: #5486ee;
+}
+main .card-wrap .progress-card .progress.five:after {
+  width: 67%;
+  background: #ee8155;
+}
+main .card-wrap .progress-card .progress.six:after {
+  width: 98%;
+  background: #27ed55;
+}
+main .card-wrap .header-img {
+  width: 100%;
 }
 
 /*# sourceMappingURL=output.css.map */
