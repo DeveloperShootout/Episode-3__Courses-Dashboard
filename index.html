@@ -1,17 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Courses Dashboard - Developer Shootout</title>
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/output.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
+
 <body>
-	<h1>Sup dawgs</h1>
+
+	<div class="dashboard">
+		<div class="logo-area">
+			<article class="logo-area__logo">
+				<span class="logo-area__logo--left"></span>
+				<span class="logo-area__logo--top"></span>
+				<span class="logo-area__logo--circle"></span>
+			</article>
+			<h1 class="logo-area__title">Courses</h1>
+		</div>
+		<div class="search-area">
+			<ion-icon name="md-search" class="search-area__icon"></ion-icon>
+			<input type="text" placeholder="Search..." class="search-area__input">
+			<ion-icon name="notifications-outline" class="search-area__icon search-area__icon--bell"></ion-icon>
+			<div class="search-area__avatar">
+				<article class="search-area__avatar-circle">N</article>
+				<ion-icon name="ios-arrow-down" class="search-area__icon search-area__icon--arrow"></ion-icon>
+			</div>
+		</div>
+		<div class="menu-area">
+			<ul class="menu-area__list">
+				<li class="menu-area__list-item menu-area__list-item--title">
+					Menu
+				</li>
+				<li class="menu-area__list-item menu-area__list-item--active">
+					<ion-icon name="md-bookmarks" class="menu-area__icon"></ion-icon> My Courses
+				</li>
+				<li class="menu-area__list-item">
+					<ion-icon name="md-list-box" class="menu-area__icon"></ion-icon> Browse Categories
+				</li>
+				<li class="menu-area__list-item">
+					<ion-icon name="md-albums" class="menu-area__icon"></ion-icon> My Categories
+				</li>
+				<li class="menu-area__list-item">
+					<ion-icon name="md-mail" class="menu-area__icon"></ion-icon> My Messages
+				</li>
+			</ul>
+			<ul class="menu-area__list">
+				<li class="menu-area__list-item menu-area__list-item--title">
+					Groups
+				</li>
+				<li class="menu-area__list-item">
+					<span class="menu-area__circle menu-area__circle--1"></span> UI/UX
+				</li>
+				<li class="menu-area__list-item">
+					<span class="menu-area__circle menu-area__circle--2"></span> Industrial Design
+				</li>
+				<li class="menu-area__list-item">
+					<span class="menu-area__circle menu-area__circle--3"></span> Architecture
+				</li>
+				<li class="menu-area__list-item menu-area__list-item--add">
+					<span class="menu-area__icon menu-area__icon--add">+</span> Add group
+				</li>
+			</ul>
+			<ul class="menu-area__list menu-area__list--last">
+				<li class="menu-area__list-item">
+					<ion-icon name="md-moon" class="menu-area__icon"></ion-icon> Dark Mode
+				</li>
+			</ul>
+		</div>
+		<div class="content-area">
+			<div class="content-area__title-area">
+				<h1 class="content-area__title">My Courses</h1>
+				<div class="content-area__select-container">
+					<select name="" id="" class="content-area__select">
+						<option value="All Courses">All Courses</option>
+					</select>
+					<ion-icon name="ios-arrow-down" class="content-area__select-icon"></ion-icon>
+				</div>
+			</div>
+
+			<div class="content-area__content">
+				<div class="card">
+					<div class="card__top">
+						<img src="./img/image-1.jpg" class="card__image">
+						<div class="card__top-content">
+							<h3 class="card__title">Abstract Design</h3>
+							<p class="card__description">What do they got in there? King Kong? Life finds a way. Yeah, but John, if The
+								Pirates of the Caribbean breaks down, the pirates don’t eat the tourists.</p>
+							<div class="card__image-wrap">
+								<img src="https://randomuser.me/api/portraits/thumb/men/1.jpg" alt="" class="card__image-single">
+								<img src="https://randomuser.me/api/portraits/thumb/men/2.jpg" alt="" class="card__image-single">
+								<img src="https://randomuser.me/api/portraits/thumb/men/3.jpg" alt="" class="card__image-single">
+								<img src="https://randomuser.me/api/portraits/thumb/men/4.jpg" alt="" class="card__image-single">
+							</div>
+						</div>
+					</div>
+					<div class="card__bottom">
+						<div class="card__bar card__bar--76"></div>
+						<span class="card__percentage">76%</span>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="card__top">
+						<img src="./img/image-2.jpg" class="card__image">
+						<div class="card__top-content">
+							<h3 class="card__title">Industrial Design</h3>
+							<p class="card__description">Life finds a way. We gotta burn the rain forest, dump toxic waste, pollute the
+								air, and rip up the OZONE! 'Cause maybe if we screw up this planet enough, they won't want it anymore! </p>
+							<div class="card__image-wrap">
+								<img src="https://randomuser.me/api/portraits/thumb/men/5.jpg" alt="" class="card__image-single">
+								<img src="https://randomuser.me/api/portraits/thumb/men/6.jpg" alt="" class="card__image-single">
+								<img src="https://randomuser.me/api/portraits/thumb/men/7.jpg" alt="" class="card__image-single">
+								<img src="https://randomuser.me/api/portraits/thumb/men/8.jpg" alt="" class="card__image-single">
+							</div>
+						</div>
+					</div>
+					<div class="card__bottom">
+						<div class="card__bar card__bar--32"></div>
+						<span class="card__percentage">32%</span>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="card__top">
+						<img src="./img/image-3.jpg" class="card__image">
+						<div class="card__top-content">
+							<h3 class="card__title">Photography</h3>
+							<p class="card__description">Checkmate... Do you have any idea how long it takes those cups to decompose. Just
+								my luck, no ice. They're using our own satellites against us. And the clock is ticking.</p>
+							<div class="card__image-wrap">
+								<img src="https://randomuser.me/api/portraits/thumb/men/9.jpg" alt="" class="card__image-single">
+								<img src="https://randomuser.me/api/portraits/thumb/men/10.jpg" alt="" class="card__image-single">
+								<img src="https://randomuser.me/api/portraits/thumb/men/11.jpg" alt="" class="card__image-single">
+								<img src="https://randomuser.me/api/portraits/thumb/men/12.jpg" alt="" class="card__image-single">
+							</div>
+						</div>
+					</div>
+					<div class="card__bottom">
+						<div class="card__bar card__bar--46"></div>
+						<span class="card__percentage">46%</span>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="card__top">
+						<img src="./img/image-4.jpg" class="card__image">
+						<div class="card__top-content">
+							<h3 class="card__title">Marketing & Finance</h3>
+							<p class="card__description">Hey, take a look at the earthlings. Goodbye! You know what? It is beets. I've
+								crashed into a beet truck. I gave it a cold? I gave it a virus. A computer virus. I gave it a cold? I gave it a virus. A computer virus. A computer virus.</p>
+							<div class="card__image-wrap">
+								<img src="https://randomuser.me/api/portraits/thumb/men/21.jpg" alt="" class="card__image-single">
+								<img src="https://randomuser.me/api/portraits/thumb/men/22.jpg" alt="" class="card__image-single">
+								<img src="https://randomuser.me/api/portraits/thumb/men/23.jpg" alt="" class="card__image-single">
+								<img src="https://randomuser.me/api/portraits/thumb/men/24.jpg" alt="" class="card__image-single">
+							</div>
+						</div>
+					</div>
+					<div class="card__bottom">
+						<div class="card__bar card__bar--28"></div>
+						<span class="card__percentage">28%</span>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="card__top">
+						<img src="./img/image-5.jpg" class="card__image">
+						<div class="card__top-content">
+							<h3 class="card__title">3d Art</h3>
+							<p class="card__description">Do you have any idea how long it takes those cups to decompose. Is this my
+								espresso machine? Wh-what is-h-how did you get my espresso machine? Do you have any idea how long it takes
+								those cups to decompose. </p>
+							<div class="card__image-wrap">
+								<img src="https://randomuser.me/api/portraits/thumb/men/31.jpg" alt="" class="card__image-single">
+								<img src="https://randomuser.me/api/portraits/thumb/men/32.jpg" alt="" class="card__image-single">
+								<img src="https://randomuser.me/api/portraits/thumb/men/33.jpg" alt="" class="card__image-single">
+								<img src="https://randomuser.me/api/portraits/thumb/men/34.jpg" alt="" class="card__image-single">
+							</div>
+						</div>
+					</div>
+					<div class="card__bottom">
+						<div class="card__bar card__bar--92"></div>
+						<span class="card__percentage">92%</span>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="card__top">
+						<img src="./img/image-6.jpg" class="card__image">
+						<div class="card__top-content">
+							<h3 class="card__title">Fine Art</h3>
+							<p class="card__description">Must go faster... go, go, go, go, go! Did he just throw my cat out of the window?
+								Eventually, you do plan to have dinosaurs on your dinosaur tour, right? I was part of something special. This
+								thing comes fully loaded.</p>
+							<div class="card__image-wrap">
+								<img src="https://randomuser.me/api/portraits/thumb/men/1.jpg" alt="" class="card__image-single">
+								<img src="https://randomuser.me/api/portraits/thumb/men/42.jpg" alt="" class="card__image-single">
+								<img src="https://randomuser.me/api/portraits/thumb/men/43.jpg" alt="" class="card__image-single">
+								<img src="https://randomuser.me/api/portraits/thumb/men/44.jpg" alt="" class="card__image-single">
+							</div>
+						</div>
+					</div>
+					<div class="card__bottom">
+						<div class="card__bar card__bar--12"></div>
+						<span class="card__percentage">12%</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<script src="https://unpkg.com/ionicons@4.5.0/dist/ionicons.js"></script>
 </body>
+
 </html>
 
 <!-- https://randomuser.me/api/portraits/thumb/men/1.jpg -->
